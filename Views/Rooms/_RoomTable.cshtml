@@ -1,0 +1,25 @@
+﻿
+   
+@model IEnumerable<Hotel_Booking_Management_System.Models.Room>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Room Number</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Available</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var room in Model)
+        {
+            <tr>
+                <td>@room.RoomNumber</td>
+                <td>@room.Type</td>
+                <td>@room.Price</td>
+                <td>@room.IsAvailable</td>
+            </tr>
+        }
+    </tbody>
+</table>

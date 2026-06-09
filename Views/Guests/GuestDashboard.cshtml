@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Guest Dashboard";
+    var displayName = ViewData["GuestName"]?.ToString() ?? User.Identity.Name;
+
+}
+
+<h2>Welcome, @displayName!</h2>
+
+
+<p>
+    From here you can:
+</p>
+
+<ul>
+    <li><a asp-controller="Bookings" asp-action="Create">Create a new booking</a></li>
+    <li><a asp-controller="Bookings" asp-action="Index">View your bookings</a></li>
+</ul>
